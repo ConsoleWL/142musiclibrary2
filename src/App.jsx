@@ -9,6 +9,8 @@ import NewSongForm from "./Components/NewSongForm/NewSongForm";
 function App() {
   const [songs, setSongs] = useState([]);
   // const [searchSongs, setSearchSongs] = useState(songs);
+  //  when I add songs into the Db it does not automatically updates in the table. I need to press F5 for some reason
+  //  search bar is a search bar
 
   const fetchSongs = async () => {
     try {
