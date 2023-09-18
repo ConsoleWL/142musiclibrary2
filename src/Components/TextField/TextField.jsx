@@ -1,8 +1,12 @@
 const TextField = ({ label, value, onChange }) => {
   return (
-    <div>
-      <label>{label}</label>
-      <input value={value} onChange={(e) => onChange(e.target.value)} />
+    <div className="mb-2">
+      <label className="form-label">{label}</label>
+      <input
+        className="form-control"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+      />
     </div>
   );
 };

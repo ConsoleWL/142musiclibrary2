@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div>
+      <div className="flex-container">
         <SearchBar />
         <MusicTable songsObj={songs} />
         <NewSongForm onNewSong={fetchSongs} />

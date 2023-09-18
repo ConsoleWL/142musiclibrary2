@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import TextField from "../TextField/TextField";
+import "./NewSongForm.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 const NewSongForm = ({ onNewSong }) => {
   const [title, setTitle] = useState("");
@@ -41,9 +43,9 @@ const NewSongForm = ({ onNewSong }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="song-form">
       <h4>Add New Song</h4>
-      <div>
+      <div className="p-2">
         <TextField label={"Title"} value={title} onChange={setTitle} />
         <TextField label={"Artist"} value={artist} onChange={setArtist} />
         <TextField label={"Album"} value={album} onChange={setAlbum} />
@@ -55,7 +57,10 @@ const NewSongForm = ({ onNewSong }) => {
         <TextField label={"Genre"} value={genre} onChange={setGenre} />
         <TextField label={"Likes"} value={like} onChange={setLike} />
       </div>
-      <button type="submit"> Add Song</button>
+      <button className="btn btn-primary" type="submit">
+        {" "}
+        Add Song
+      </button>
     </form>
   );
 };

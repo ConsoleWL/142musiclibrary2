@@ -8,7 +8,7 @@ const MusicTable = ({ songsObj }) => {
   return (
     <div>
       <h4>Music Table</h4>
-      <table>
+      <table className="table">
         <thead>
           <tr>
             <th>Id</th>
