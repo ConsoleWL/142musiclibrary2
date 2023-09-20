@@ -8,7 +8,7 @@ const NewSongForm = ({ onNewSong }) => {
   const [title, setTitle] = useState("");
   const [artist, setArtist] = useState("");
   const [album, setAlbum] = useState("");
-  const [releaseDate, setReleaseDate] = useState("");
+  const [releasedate, setReleaseDate] = useState("");
   const [genre, setGenre] = useState("");
   const [like, setLike] = useState("");
 
@@ -19,7 +19,7 @@ const NewSongForm = ({ onNewSong }) => {
       title,
       artist,
       album,
-      releaseDate,
+      releasedate,
       genre,
       like,
     };
@@ -51,8 +51,9 @@ const NewSongForm = ({ onNewSong }) => {
         <TextField label={"Album"} value={album} onChange={setAlbum} />
         <TextField
           label={"Release Date"}
-          value={releaseDate}
+          value={releasedate}
           onChange={setReleaseDate}
+          type="date"
         />
         <TextField label={"Genre"} value={genre} onChange={setGenre} />
         <TextField label={"Likes"} value={like} onChange={setLike} />

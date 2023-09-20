@@ -1,4 +1,4 @@
-const TextField = ({ label, value, onChange }) => {
+const TextField = ({ label, value, onChange, type = "text" }) => {
   return (
     <div className="mb-2">
       <label className="form-label">{label}</label>
@@ -6,6 +6,7 @@ const TextField = ({ label, value, onChange }) => {
         className="form-control"
         value={value}
         onChange={(e) => onChange(e.target.value)}
+        type={type}
       />
     </div>
   );

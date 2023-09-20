@@ -25,11 +25,26 @@ function App() {
     fetchSongs();
   }, []);
 
+  const filterSongs = (event) => {
+    let filterValue = event.target.value;
+    if (filterValue === "") {
+      fetchSongs();
+    }
+
+    let filterSongs = songs.filter(
+      (song) =>
+        song.title.toLowerCase().includes(filterValue.toLowerCase()) ||
+        song.artist.toLowerCase().includes(filterValue.toLowerCase())
+    );
+
+    setSongs(filterSongs);
+  };
+
   return (
     <div className="App">
       <Header />
       <div className="flex-container">
-        <SearchBar />
+        <SearchBar filterSongs={filterSongs} />
         <MusicTable songsObj={songs} />
         <NewSongForm onNewSong={fetchSongs} />
       </div>

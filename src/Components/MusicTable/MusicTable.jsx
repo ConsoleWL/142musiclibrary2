@@ -15,7 +15,7 @@ const MusicTable = ({ songsObj }) => {
             <th>Title</th>
             <th>Artist</th>
             <th>Album</th>
-            <th>Realese Data</th>
+            <th>Release Date</th>
             <th>Genre</th>
             <th>Likes</th>
           </tr>

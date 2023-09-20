@@ -1,8 +1,8 @@
-const SearchBar = ({ filter }) => {
+const SearchBar = ({ filterSongs }) => {
   return (
     <div>
-      <h4>SearchBar</h4>
-      <input onChange={filter} />
+      <h4>Search Bar</h4>
+      <input onChange={(e) => filterSongs(e)} placeholder="Search for a song" />
     </div>
   );
 };
